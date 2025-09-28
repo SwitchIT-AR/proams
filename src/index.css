@@ -1,0 +1,11 @@
+/* Fondo negro global y tipografías */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #000;  /* fondo negro */
+  color: #fff;             /* contraste */
+  margin: 0;
+  font-family: Roboto, Montserrat, sans-serif;
+}
