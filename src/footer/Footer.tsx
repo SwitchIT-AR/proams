@@ -60,9 +60,9 @@ export function Footer() {
               <Text size="sm">
                 info@
                 <Text span fw={800}>
-                  proa.ms
+                  proa
                 </Text>
-                .com
+                .ms
               </Text>
             </Box>
           </Group>
