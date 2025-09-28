@@ -46,7 +46,7 @@ export function Footer() {
                 +54 9 11 <Text span fw={800}>6674-4929</Text>
               </Text>
               <Text size="sm" mt={4}>
-                +54 99 11 <Text span fw={800}>3196-5967</Text>
+                +54 9 11 <Text span fw={800}>3196-5967</Text>
               </Text>
             </Box>
           </Group>
