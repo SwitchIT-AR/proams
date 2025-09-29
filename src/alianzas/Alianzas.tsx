@@ -16,10 +16,10 @@ export function Alianzas() {
       <SimpleGrid cols={2} spacing={0}>
         <Image src={alianzas} w={"100%"}></Image>
         <Stack gap={"xl"} justify="center" align="stretch" pl={100} pr={100}>
-          <Title>Alianzas </Title>
+          <Title c={"#1A3B6D"}>Alianzas </Title>
           <Text size={"1.3em"}>
-            Establecimos alianzas estratégicas con astilleros de la región en
-            rubros como diseño, construcción y reparación de buques.
+            Establecimos <strong>alianzas estratégicas con astilleros</strong> de la región en
+            rubros como <strong>diseño, construcción y reparación de buques.</strong>
           </Text>
         </Stack>
       </SimpleGrid>

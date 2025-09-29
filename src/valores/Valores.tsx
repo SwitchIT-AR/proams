@@ -16,10 +16,10 @@ export function Valores() {
     <Box  h={"auto"} bg={"#F0F0F0"}>
       <SimpleGrid cols={2} spacing={0}>
         <Stack gap={"xl"} justify="center" align="stretch" pl={100} pr={100}>
-          <Title>Valores </Title>
+          <Title c={"#1A3B6D"}>Valores </Title>
 
           <Text size={"1.3em"}>
-            El compromiso, la confiabilidad y la efectividad son nuestro sello y
+           <strong> El compromiso, la confiabilidad y la efectividad</strong> son nuestro sello y
             herramienta fundamental para sostener e incrementar nuestra cartera
             de Clientes, también nuestro principal valor para todos y cada uno
             de los integrantes de la empresa.

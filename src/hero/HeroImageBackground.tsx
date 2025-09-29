@@ -1,5 +1,6 @@
 import { Container, Image, Title } from '@mantine/core';
 import Logo from '../assets/proa-logo.png';
+import { IconArrowDown } from '@tabler/icons-react';
 
 export function HeroImageBackground() {
   return (
@@ -9,42 +10,35 @@ export function HeroImageBackground() {
           backgroundImage: 'url("/proa-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100svh',          // altura real del viewport
+          height: '100svh', // altura real del viewport
           width: '100%',
           position: 'relative',
         }}
       >
-        {/* overlay para contraste */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'rgba(0,0,0,0.35)',
-          }}
-        />
-
-        {/* fila principal: centrado vertical + separación izq/der */}
         <div
           style={{
             position: 'relative',
             zIndex: 1,
             display: 'flex',
-            alignItems: 'center',        // centra vertical
-            justifyContent: 'space-between',
+            flexDirection: 'column',   // apila vertical
+            justifyContent: 'space-between', // reparte arriba y abajo
+            alignItems: 'flex-start',  // todo alineado a la izquierda
             height: '100%',
             padding: '3rem',
-            gap: '2rem',
           }}
         >
-          {/* izquierda: logo */}
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* arriba: logo */}
+          <div>
             <Image src={Logo} alt="Proa MS" maw={350} />
           </div>
 
-          {/* derecha: texto */}
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <Title order={1} c="white" fw={400} style={{ textAlign: 'right' }}>
-              Sitio en mantenimiento
+          {/* abajo: texto */}
+          <div>
+            <Title order={1} c="white" fw={400} style={{ textAlign: 'left' }}>
+              tu <strong>aliado</strong> estrategico
+            </Title>
+             <Title order={1} c="white" fw={400} style={{ textAlign: 'left' }}>
+              <IconArrowDown></IconArrowDown>
             </Title>
           </div>
         </div>

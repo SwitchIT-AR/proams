@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Title, Card, Text, SimpleGrid, Box } from "@mantine/core";
 
-// Fuente de datos (JSON) para mapear los 10 servicios
 const SERVICES = [
   { id: 1, label: "Asesoramos en Diseño, Construcción y Reparaciones Navales" },
   { id: 2, label: "Seguros" },
@@ -18,40 +17,50 @@ const SERVICES = [
 export default function ServiciosGrid() {
   return (
     <Container size="lg" py="xl">
-      <Title order={3} mb="lg">NUESTROS SERVICIOS:</Title>
+      <Title c="#1A3B6D" order={1} mt="xl" mb="xl">
+        NUESTROS SERVICIOS:
+      </Title>
 
-      <SimpleGrid
-        cols={ 3}
-        spacing={0}
-        verticalSpacing={10}
-      >
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
         {SERVICES.map((s) => (
-            <Box style={{display:"flex", justifyContent:"center"}}>
-          <Card
-            key={s.id}
-      
-            radius="md"
-            shadow="sm"
-            withBorder
-            style={{
-              background: "#1b5b8f",
-              color: "white",
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 16,
-              width:250,
-              height:250,
-            }}
-          >
-            <Text size="xl" fw={400} lh={1.25}>
-              {s.label}
-            </Text>
-          </Card>
-          </Box>
+          <HoverCard key={s.id} label={s.label} />
         ))}
       </SimpleGrid>
     </Container>
+  );
+}
+
+// Componente reutilizable con hover inline
+function HoverCard({ label }: { label: string }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <Box style={{ display: "flex", justifyContent: "center" }}>
+      <Card
+        radius="md"
+        shadow="sm"
+        withBorder
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: hovered ? "#e5e7eb" : "#1b5b8f", // gris al hover
+          color: hovered ? "#111827" : "white",        // texto oscuro en gris
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: 16,
+          borderColor:"transparent",
+          width: 250,
+          height: 250,
+          cursor: "pointer",
+          transition: "all 0.25s ease",
+        }}
+      >
+        <Text size="xl" fw={400} lh={1.25}>
+          {label}
+        </Text>
+      </Card>
+    </Box>
   );
 }
