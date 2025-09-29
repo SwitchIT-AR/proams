@@ -4,8 +4,8 @@ html, body, #root {
 }
 
 body {
-  background-color: #000;  /* fondo negro */
-  color: #fff;             /* contraste */
+  background-color: white;  /* fondo negro */
+  color: #1a1a1a;             /* contraste */
   margin: 0;
   font-family: Roboto, Montserrat, sans-serif;
 }
