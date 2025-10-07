@@ -1,16 +1,21 @@
 import { Container, Image, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import Logo from '../assets/proa-logo.png';
 import { IconArrowDown } from '@tabler/icons-react';
 
 export function HeroImageBackground() {
+  // ✅ Versión válida para Mantine v8.3
+  const isMobile = useMediaQuery('(max-width: 639px)');
+  const bg = isMobile ? "url('/video.gif')" : "url('/proa-bg.png')";
+
   return (
     <Container fluid p={0} style={{ position: 'relative' }}>
       <div
         style={{
-          backgroundImage: 'url("/proa-bg.png")',
+          backgroundImage: bg,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100svh', // altura real del viewport
+          height: '100svh',
           width: '100%',
           position: 'relative',
         }}
@@ -20,26 +25,24 @@ export function HeroImageBackground() {
             position: 'relative',
             zIndex: 1,
             display: 'flex',
-            flexDirection: 'column',   // apila vertical
-            justifyContent: 'space-between', // reparte arriba y abajo
-            alignItems: 'flex-start',  // todo alineado a la izquierda
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
             height: '100%',
             padding: '3rem',
           }}
         >
-          {/* arriba: logo */}
           <div>
             <Image src={Logo} alt="Proa MS" maw={350} />
           </div>
 
-          {/* abajo: texto */}
           <div>
             <Title order={1} c="white" fw={400} style={{ textAlign: 'left' }}>
               tu <strong>aliado</strong> estrategico
             </Title>
-             <Title order={1} c="white" fw={400} style={{ textAlign: 'left' }}>
-              <IconArrowDown></IconArrowDown>
-            </Title>
+            <div style={{ marginTop: '0.5rem' }}>
+              <IconArrowDown size={36} color="white" />
+            </div>
           </div>
         </div>
       </div>
