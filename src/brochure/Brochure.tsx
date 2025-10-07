@@ -1,7 +1,7 @@
 import brochure from "../assets/brochure.png"
 import { IconArrowDown } from "@tabler/icons-react"
 
-import { Button, SimpleGrid, Image, Container, Box } from "@mantine/core"
+import { Button, SimpleGrid, Image, Box } from "@mantine/core"
 
 export function Brochure() {
     return (

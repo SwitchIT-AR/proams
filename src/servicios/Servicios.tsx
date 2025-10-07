@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Title, Card, Text, SimpleGrid, Box } from "@mantine/core";
 
 const SERVICES = [

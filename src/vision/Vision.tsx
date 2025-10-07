@@ -1,14 +1,11 @@
 import {
-  Container,
   SimpleGrid,
   Title,
   Box,
   Text,
   Image,
-  Group,
   Stack,
 } from "@mantine/core";
-import logo from "../assets/logo-azul.png";
 import visionship from "../assets/visionship.png";
 
 export function Vision() {

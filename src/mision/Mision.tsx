@@ -1,11 +1,9 @@
 import {
-  Container,
   SimpleGrid,
   Title,
   Box,
   Text,
   Image,
-  Group,
   Stack,
 } from "@mantine/core";
 import misionship from "../assets/misonship.png";
