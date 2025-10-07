@@ -1,14 +1,11 @@
 import {
-  Container,
   SimpleGrid,
   Title,
   Box,
   Text,
   Image,
-  Group,
   Stack,
 } from "@mantine/core";
-import logo from "../assets/logo-azul.png";
 import valores from "../assets/valores.png";
 
 export function Valores() {
@@ -21,8 +18,8 @@ export function Valores() {
           <Text size={"1.3em"}>
            <strong> El compromiso, la confiabilidad y la efectividad</strong> son nuestro sello y
             herramienta fundamental para sostener e incrementar nuestra cartera
-            de Clientes, también nuestro principal valor para todos y cada uno
-            de los integrantes de la empresa.
+            de Clientes, también <strong>nuestro principal valor para todos y cada uno
+            de los integrantes de la empresa.</strong>
           </Text>
         </Stack>
 
