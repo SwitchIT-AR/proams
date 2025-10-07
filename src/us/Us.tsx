@@ -16,8 +16,8 @@ export function Us() {
     <Container
       size="xl"
       mt={100}
-      p={{ base: "md", sm: "lg" }}
-  h={{ base: "80svh", sm: "80dvh", md: "70svh", lg: "80svh", xl:"70svh"}} // alturas responsivas
+      py={{ base:90, sm: "lg" }}
+      h={{ base: "140svh", sm: "80dvh", md: "70svh", lg: "80svh", xl: "90svh" }} // alturas responsivas
     >
       <Grid align="center" gutter={{ base: "xl", md: 0 }}>
         {/* Columna izquierda (texto + logo) */}
@@ -32,7 +32,7 @@ export function Us() {
               fw={800}
               c={"#1A3B6D"}
               style={{ letterSpacing: "-0.02em", lineHeight: 1.1 }}
-      
+
             >
               Quiénes somos
             </Title>

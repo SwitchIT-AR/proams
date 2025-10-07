@@ -21,7 +21,7 @@ export default function ServiciosGrid() {
         NUESTROS SERVICIOS:
       </Title>
 
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
+      <SimpleGrid cols={{ base: 2, sm: 2, md: 3 }} spacing="lg">
         {SERVICES.map((s) => (
           <HoverCard key={s.id} label={s.label} />
         ))}
