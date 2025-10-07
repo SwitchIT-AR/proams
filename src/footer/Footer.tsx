@@ -48,6 +48,9 @@ export function Footer() {
               <Text size="sm" mt={4}>
                 +54 9 11 <Text span fw={800}>3196-5967</Text>
               </Text>
+              <Text size="sm" mt={4}>
+                +54 9 11 <Text span fw={800}>5002-4502</Text>
+              </Text>
             </Box>
           </Group>
 
@@ -76,7 +79,7 @@ export function Footer() {
               <Text size="sm">
                 <Text span fw={800}>Juncal 643</Text>, 4°, “E”,
                 <br />
-                Ciudad Autónoma de Buenos Aires
+                Ciudad Autónoma de Buenos Aires, Republica Argentina.
               </Text>
             </Box>
           </Group>
